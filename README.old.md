@@ -1,10 +1,8 @@
 <div align="center">
-  <img src="assets/cadenza-logo-final.png" width="110" alt="Cadenza Logo"/>
-  <br><br>
   <img src="assets/cadenza-banner-final.png" width="620" alt="Cadenza Banner"/>
   <br><br>
   <p>
-    <img src="https://img.shields.io/badge/version-0.7-brightgreen?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-0.6.1-brightgreen?style=flat-square" alt="Version">
     <img src="https://img.shields.io/badge/keyboard-Corne%20Choc%2036-blue?style=flat-square" alt="Keyboard">
     <img src="https://img.shields.io/badge/firmware-Vial%20%2F%20QMK-orange?style=flat-square" alt="Firmware">
     <img src="https://img.shields.io/badge/base-Colemak--DH-purple?style=flat-square" alt="Base">
@@ -14,10 +12,9 @@
 
 ---
 
+**Cadenza** is a 36-key split keyboard layout for the [Corne Choc](https://github.com/foostan/crkbd), built on [Colemak-DH](https://colemakmods.github.io/mod-dh/) and configured with [Vial](https://get.vial.today/). It uses Tap Dance throughout — for Home Row Mods, bracket pairs, and layer access — placing every key within reach of the home position without wrist movement.
+
 > *Cadenza (n.): a brilliant, technically demanding solo passage — calling for precision timing and controlled technique.*
- 
-**Cadenza** is a 36-key split keyboard layout for the [Corne Choc](https://github.com/foostan/crkbd), built on [Colemak-DH](https://colemakmods.github.io/mod-dh/) and configured entirely in [Vial](https://get.vial.today/). Tap Dance throughout — for Home Row Mods, bracket pairs, and layer access — keeping every key within reach of the home position.
-Is is heavily inspired/based on the [Miryoku](https://github.com/manna-harbour/miryoku) layout.
 
 ## ✦ Highlights
 
@@ -25,7 +22,7 @@ Is is heavily inspired/based on the [Miryoku](https://github.com/manna-harbour/m
 - **10 layers** — alpha, mods/media, navigation, mouse, symbols, numbers, function keys, clipboard, brackets, code/CLI
 - **Symmetric layer access** — L7/L8/L9 reachable from either hand independently
 - **Unified numpad grid** — L4, L5, L6 share the same physical layout shape
-- **Code & CLI layer (L9)** — four macros on the right home row: ` | ` · `~/`/`../` · ` 2>&1 ` · `$()`/`${}`
+- **Code & CLI layer (L9)** — four high-value shell sequences on the right home row
 - **Vial-native** — all layers, macros, and tap dance fully editable in Vial without any firmware rebuild
 
 ## ✦ Layer Overview
@@ -45,12 +42,19 @@ See **[docs/Cadenza-Layout.html](https://one7two99.github.io/cadenza)** for all 
 | L8 | Bracket Pairs | Hold D *or* Hold H | Bracket tap/hold pairs |
 | L9 | Code & CLI | Hold C *or* Hold `,` | Shell & code sequences |
 
-## ✦ What changed in v0.7 in Layer 9 "Coding / CLI"
+## ✦ Code & CLI Layer (L9)
 
-The `:/​/` false-trigger fix: typing `https://` previously activated the `~/`
-macro because the `/` key had a double-tap action. In v0.7 that double-tap is
-removed from `/` entirely. `~/` and `../` now live on TD(3) in L9 — tap for
-`~/`, double-tap for `../` (chainable for `../../` etc.).
+The right home row carries four macros covering the most-typed multi-character sequences in shell and code work:
+
+| Key | Output | Notes |
+|---|---|---|
+| Index | ` \| ` | Pipe with spaces |
+| Middle | `../` | Parent directory (was 4 keystrokes) |
+| Ring | ` 2>&1 ` | Stderr redirect (was 5 shifted keys) |
+| Pinky (tap) | `$()` + cursor inside | Command substitution |
+| Pinky (hold) | `${}` + cursor inside | Variable expansion |
+
+Access: hold **C** (left middle finger down) or **,** (right middle finger down). The middle finger was chosen over G/M (index lateral) because vertical finger movement is shorter, more natural, and doesn't destabilize hand position. G and M retain their `tap=letter · hold=App` assignment.
 
 ## ✦ Design Decisions
 
@@ -60,10 +64,10 @@ removed from `/` entirely. `~/` and `../` now live on TD(3) in L9 — tap for
 
 ## ✦ Installation
 
-1. Flash standard [Vial firmware](https://get.vial.today/) on your Corne Choc
-2. Open Vial desktop app, connect keyboard via USB
-3. **File → Load saved layout** → select the `.vil` file attached to this release
-4. OS keyboard layout must be set to **US International**
+1. Flash [Vial firmware](https://get.vial.today/) on your Corne Choc
+2. Open the Vial desktop app
+3. Connect keyboard via USB
+4. **File → Load saved layout** → select `firmware/Cadenza-Corne-Pro_v0_6_1.vil`
 
 ## ✦ Documentation
 
