@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Cadenza v0.2.0 — Layout Documentation</title>
+<title>Cadenza — Layout Documentation</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:15px;line-height:1.7;color:#1a1a1a;background:#fafaf8}
@@ -78,6 +78,8 @@ hr{border:none;border-top:1px solid #E8E6E0;margin:36px 0}
   <blockquote style="margin-top:18px"><em>Cadenza (n.): a brilliant, technically demanding solo passage — calling for precision timing and controlled technique.</em></blockquote>
 </div>
 
+<h2 id="vs-qwerty">Cadenza 0.8.0 - Design decisions and layer documentation</h2>
+
 <div class="toc"><h3>Contents</h3><ol>
   <li><a href="#vs-qwerty">Why Cadenza over QWERTY?</a></li>
   <li><a href="#vs-miryoku">Why Cadenza over Miryoku?</a></li>
@@ -89,6 +91,33 @@ hr{border:none;border-top:1px solid #E8E6E0;margin:36px 0}
   <li><a href="#macros">Macro Reference</a></li>
   <li><a href="#firmware">Firmware Notes</a></li>
 </ol></div>
+
+<div style="background:#fff;border:1px solid #E8E6E0;border-radius:10px;padding:16px 20px;margin-bottom:36px;display:flex;align-items:flex-start;gap:16px">
+  <div style="flex-shrink:0;margin-top:2px">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.167 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.341-3.369-1.341-.454-1.154-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836a9.59 9.59 0 012.504.337c1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" fill="#1a1a1a"/>
+    </svg>
+  </div>
+  <div style="flex:1">
+    <div style="font-size:14px;font-weight:600;color:#111;margin-bottom:4px">
+      GitHub Repository &amp; Latest Release
+    </div>
+    <div style="font-size:13px;color:#555;line-height:1.6">
+      Source, firmware files, and issue tracker at
+      <a href="https://github.com/one7two99/cadenza" style="color:#3B6D11;font-weight:500">github.com/one7two99/cadenza</a>.
+      The latest <code>.vil</code> file is always attached to the
+      <a href="https://github.com/one7two99/cadenza/releases/latest" style="color:#3B6D11;font-weight:500">latest release</a>.
+    </div>
+    <div style="font-size:13px;color:#888;margin-top:6px;line-height:1.5">
+      This page is a standalone HTML file — it can be saved locally for offline reference
+      (<strong>File → Save Page As</strong> in your browser, or download from the
+      <a href="https://github.com/one7two99/cadenza/tree/main/docs" style="color:#3B6D11">docs/ folder</a>
+      in the repository).
+    </div>
+  </div>
+</div>
+
+
 
 <h2 id="vs-qwerty">Why Cadenza over QWERTY?</h2>
 <table><thead><tr><th>Problem with QWERTY</th><th>Cadenza solution</th></tr></thead><tbody><tr><td>High same-finger bigrams (<code>ed</code>, <code>ce</code>…)</td><td>Colemak-DH distributes load evenly across all fingers</td></tr><tr><td>Common letters on weak fingers</td><td>All 5 most-frequent English letters (E T A O I) on home row</td></tr><tr><td>Lateral stretch for B, Y, H</td><td>Colemak-DH minimises lateral movement</td></tr><tr><td>Ctrl/Shift require leaving home row</td><td>Hold <code>A</code>=⌘ · <code>S</code>=⌃ · <code>T</code>=⇧ — no finger leaves home</td></tr><tr><td>Number row forces arm travel</td><td>Dedicated L5 on thumb hold — zero arm movement</td></tr><tr><td>Symbol keys scattered far from home</td><td>All symbols via L4/L5/L8/L9 from home position</td></tr><tr><td>Wide keyboard forces arms apart</td><td>Corne Choc split form aligns with natural shoulder width</td></tr></tbody></table>
@@ -286,8 +315,8 @@ hr{border:none;border-top:1px solid #E8E6E0;margin:36px 0}
 
 <h2 id="firmware">Firmware Notes</h2>
 <ul>
-  <li><strong>Version:</strong> v0.8</li>
-  <li><strong>File:</strong> <code>Cadenza-Corne-Pro_v0_8.vil</code></li>
+  <li><strong>Version:</strong> v0.8.0</li>
+  <li><strong>File:</strong> <code>Cadenza-Corne-Pro_v0_8_0.vil</code></li>
   <li><strong>Firmware:</strong> Vial v6 / VIA v9</li>
   <li><strong>Keyboard:</strong> Corne Choc (crkbd), 36 keys</li>
   <li><strong>UID:</strong> <code>5010774632021243529</code></li>
@@ -296,5 +325,5 @@ hr{border:none;border-top:1px solid #E8E6E0;margin:36px 0}
   <li><strong>OS layout:</strong> US International (required for dead-key macros M2–M4)</li>
 </ul>
 <hr>
-<p style="font-size:13px;color:#888;text-align:center">Cadenza Layout v0.8 · Designed by one7two99 · MIT · <a href="https://github.com/one7two99/cadenza" style="color:#3B6D11">github.com/one7two99/cadenza</a></p>
+<p style="font-size:13px;color:#888;text-align:center">Cadenza Layout · Designed by one7two99 · MIT · <a href="https://github.com/one7two99/cadenza" style="color:#3B6D11">github.com/one7two99/cadenza</a></p>
 </div></body></html>

@@ -1,4 +1,4 @@
-## What changed
+## What changed in v0.8.0
 
 **Added: Layer 10 — International Characters.**
 Dead-key and hard-to-reach characters on a dedicated layer, mirrored on both hands:

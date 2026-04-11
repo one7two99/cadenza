@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.2.0] — 2026-04-11
+## [0.8.0] — 2026-04-11
 
 ### Added
 - **Layer 10 — International Characters** (Hold X or Hold `.`) — `\` · `|` · TD(4) · `"` — mirrored on both hands.
@@ -28,7 +28,7 @@
 
 ---
 
-## [0.1.1] — 2026-04-11
+## [0.7.0] — 2026-04-11
 
 ### Fixed
 - **TD(1) `/` — removed double-tap `~/` macro**
@@ -45,7 +45,7 @@
 
 ---
 
-## [0.1.0] — 2026-04-11 — Initial public release
+## [0.6.0] — 2026-04-11 — Initial public release
 
 ### Added
 - Full 11-layer layout based on Colemak-DH
@@ -57,7 +57,3 @@
 - Macros M0–M9 defined
 - Vial `.vil` configuration file, full HTML and Markdown documentation
 - Logo and banner assets
-
-> **Note on pre-semver naming:** the repository was initially published with
-> informal version names (`v0.6.1`, `v0.7`, `v0.8`). These map to `v0.1.0`,
-> `v0.1.1`, and `v0.2.0` respectively under the formal semver scheme.

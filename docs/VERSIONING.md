@@ -88,19 +88,11 @@ core layers.
 | `v0.1.1` | PATCH | Fix `://` false trigger — TD(1) double-tap removed, TD(3) added to L9 |
 | `v0.2.0` | MINOR | L10 International Characters, L9 mirrored both hands, L1 media simplified, TD(2)/TD(12) added |
 
-> **Note on pre-semver naming:** the repository was initially published with
-> informal version names (`v0.6.1`, `v0.7`). These map to `v0.1.0` and
-> `v0.1.1` respectively under the formal semver scheme adopted from v0.1.0
-> onwards.
-
 ---
 
 ## Planned milestones
 
-| Version | Description |
-|---|---|
-| `v0.3.0` | L11 System / Workspace layer |
-| `v1.0.0` | Stability declaration — core layout complete and validated |
+See also the [../ROADMAP.md](ROADMAP.md) Dokument.
 
 ---
 
@@ -112,7 +104,7 @@ git commit -m "fix(l9): correct TD(3) tipping term"
 git tag v0.1.2
 git push origin v0.1.2
 gh release create v0.1.2 \
-  "firmware/Cadenza-Corne-Pro_v0_1_2.vil#Cadenza-v0.1.2.vil" \
+  "configuration/Cadenza-Corne-Pro_v0_1_2.vil#Cadenza-v0.1.2.vil" \
   --title "v0.1.2 — <short description>" \
   --notes-file release-notes.md
 
@@ -121,7 +113,7 @@ git commit -m "feat(l10): add system/workspace layer on G-hold"
 git tag v0.2.0
 git push origin v0.2.0
 gh release create v0.2.0 \
-  "firmware/Cadenza-Corne-Pro_v0_2_0.vil#Cadenza-v0.2.0.vil" \
+  "configuration/Cadenza-Corne-Pro_v0_2_0.vil#Cadenza-v0.2.0.vil" \
   --title "v0.2.0 — System/Workspace layer (L10)" \
   --notes-file release-notes.md
 
@@ -130,22 +122,22 @@ git commit -m "feat!: reassign thumb cluster BSP/ENT positions"
 git tag v2.0.0
 git push origin v2.0.0
 gh release create v2.0.0 \
-  "firmware/Cadenza-Corne-Pro_v2_0_0.vil#Cadenza-v2.0.0.vil" \
+  "configuration/Cadenza-Corne-Pro_v2_0_0.vil#Cadenza-v2.0.0.vil" \
   --title "v2.0.0 — BREAKING: thumb cluster reassignment" \
   --notes-file release-notes.md
 ```
 
 The `!` after the type token (`feat!`, `fix!`) is the
-[Conventional Commits](https://www.conventionalcommits.org/) convention for
+[Con ventional Commits](https://www.conventionalcommits.org/) convention for
 signalling a breaking change — it pairs naturally with MAJOR semver increments.
 MAJOR workflow applies only after `v1.0.0` is tagged; during `v0.x.x` breaking
 changes are absorbed into MINOR increments.
 
 ---
 
-## Firmware file naming convention
+## configuration file naming convention
 
-Firmware files follow the version number directly:
+configuration files follow the version number directly:
 
 ```
 Cadenza-Corne-Pro_v0_1_0.vil
@@ -154,6 +146,6 @@ Cadenza-Corne-Pro_v0_2_0.vil
 Cadenza-Corne-Pro_v1_0_0.vil
 ```
 
-Dots replaced with underscores for filesystem compatibility. All firmware
-files are kept in `firmware/` and attached as assets to their corresponding
+Dots replaced with underscores for filesystem compatibility. All configuration
+files are kept in `configuration/` and attached as assets to their corresponding
 GitHub release.

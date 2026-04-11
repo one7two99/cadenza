@@ -1,4 +1,4 @@
-## What changed
+## What changed in 0.7.0
 
 **Fixed:** Typing `://` (e.g. `https://`) no longer triggers the `~/` macro.
 The double-tap action has been removed from the `/` key. TD(1) is now
