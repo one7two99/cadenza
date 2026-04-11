@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="assets/cadenza-logo-final.png" width="110" alt="Cadenza Logo"/>
-  <br><br>
   <img src="assets/cadenza-banner-final.png" width="620" alt="Cadenza Banner"/>
   <br><br>
   <p>
@@ -8,7 +6,7 @@
     <img src="https://img.shields.io/badge/keyboard-Corne%20Choc%2036-blue?style=flat-square" alt="Keyboard">
     <img src="https://img.shields.io/badge/firmware-Vial%20%2F%20QMK-orange?style=flat-square" alt="Firmware">
     <img src="https://img.shields.io/badge/base-Colemak--DH-purple?style=flat-square" alt="Base">
-    <img src="https://img.shields.io/badge/license-CC%20BY%204.0-informational?style=flat-square" alt="License">
+    <img src="https://img.shields.io/github/license/one7two99/cadenza?style=flat-square" alt="License">
   </p>
 </div>
 
