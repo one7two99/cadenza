@@ -13,9 +13,12 @@
 ---
 
 > *Cadenza (n.): a brilliant, technically demanding solo passage — calling for precision timing and controlled technique.*
- 
-**Cadenza** is a 36-key split keyboard layout for the [Corne Choc](https://github.com/foostan/crkbd), built on [Colemak-DH](https://colemakmods.github.io/mod-dh/) and configured entirely in [Vial](https://get.vial.today/). Tap Dance throughout — for Home Row Mods, bracket pairs, and layer access — keeping every key within reach of the home position.
-Is is heavily inspired/based on the [Miryoku](https://github.com/manna-harbour/miryoku) layout.
+
+**Cadenza** is a 36-key split keyboard layout for the [Corne Choc](https://github.com/foostan/crkbd), built on [Colemak-DH](https://colemakmods.github.io/mod-dh/) and configured entirely in [Vial](https://get.vial.today/). It uses Tap Dance throughout — for Home Row Mods, bracket pairs, and layer access — keeping every key within reach of the home position without moving your wrists.
+
+Heavily inspired by [Miryoku](https://github.com/manna-harbour/miryoku), but with per-finger tipping terms, symmetric layer access from either hand, and a dedicated Code & CLI layer built for daily systems work.
+
+> *36 keys. A tap dance for the typing elite.*
 
 ## ✦ Highlights
 

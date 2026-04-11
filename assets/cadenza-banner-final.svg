@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="960" height="200" viewBox="0 0 960 200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="960" height="200" rx="20" fill="#050E08"/>
+<svg width="960" height="220" viewBox="0 0 960 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="220" rx="20" fill="#050E08"/>
 
-  <!-- Left bracket -->
-  <path d="M68 66 L54 66 L54 134 L68 134"
-        stroke="#4DCC8A" stroke-width="3.5" fill="none"
-        stroke-linecap="square" stroke-linejoin="miter"/>
-  <!-- Right bracket -->
-  <path d="M892 66 L906 66 L906 134 L892 134"
-        stroke="#4DCC8A" stroke-width="3.5" fill="none"
-        stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M72 70 L55 70 L55 150 L72 150"
+        stroke="#4DCC8A" stroke-width="4" fill="none" stroke-linecap="square"/>
+  <path d="M888 70 L905 70 L905 150 L888 150"
+        stroke="#4DCC8A" stroke-width="4" fill="none" stroke-linecap="square"/>
 
-  <!-- CADENZA -->
-  <text x="480" y="119"
-    font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial', sans-serif"
-    font-size="72" font-weight="800"
-    fill="#FFFFFF" text-anchor="middle" letter-spacing="12">CADENZA</text>
+  <text x="480" y="122"
+    font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+    font-size="80" font-weight="800"
+    fill="#FFFFFF" text-anchor="middle" letter-spacing="14">CADENZA</text>
 
-  <!-- Tagline -->
-  <text x="480" y="160"
-    font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial', sans-serif"
-    font-size="12" font-weight="500"
-    fill="#4DCC8A" text-anchor="middle" letter-spacing="7">36-KEY SPLIT LAYOUT  ·  COLEMAK-DH  ·  VIAL</text>
+  <line x1="200" y1="140" x2="760" y2="140"
+        stroke="#FFFFFF" stroke-width="0.7" opacity="0.15"/>
+
+  <text x="480" y="172"
+    font-family="-apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif"
+    font-size="18" font-weight="500"
+    fill="#FFFFFF" text-anchor="middle" letter-spacing="1.5"
+    opacity="0.9">36 keys. A tap dance for the typing elite.</text>
 </svg>
