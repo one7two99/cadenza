@@ -2,7 +2,7 @@
   <img src="assets/cadenza-banner-final.png" width="620" alt="Cadenza Banner"/>
   <br><br>
   <p>
-    <img src="https://img.shields.io/badge/version-0.8-brightgreen?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-0.8.1-brightgreen?style=flat-square" alt="Version">
     <img src="https://img.shields.io/badge/keyboard-Corne%20Choc%2036-blue?style=flat-square" alt="Keyboard">
     <img src="https://img.shields.io/badge/firmware-Vial%20%2F%20QMK-orange?style=flat-square" alt="Firmware">
     <img src="https://img.shields.io/badge/base-Colemak--DH-purple?style=flat-square" alt="Base">
@@ -45,7 +45,19 @@ See **[docs/Cadenza-Layout.html](https://one7two99.github.io/cadenza)** for all 
 | L9 | Code & CLI | Hold C *or* Hold `,` | Shell & code sequences — both hands (mirrored) |
 | L10 | International | Hold X *or* Hold `.` | `\` · `\|` · `` ` `` · `"` — both hands (mirrored) |
 
-## ✦ What changed in v0.8
+## ✦ What changed in v0.8.1
+
+**L2 Navigation — `"` removed from inner home row.**
+The double-quote shortcut on the N-key position (right inner home) has been removed.
+German Umlaut input is now handled exclusively by the International layer (L10),
+making L2 cleaner and avoiding the redundancy.
+
+**L3 Mouse — `TD(4)` removed from inner home row.**
+The backtick/code-fence tap dance is now available on L10 (middle finger), making
+the L3 placement redundant. Inner home row on the mouse layer is now empty.
+
+<details>
+<summary>What changed in v0.8.0</summary>
 
 **Layer 10 — International Characters:** dead-key and hard-to-reach characters
 (`\` · `|` · `` ` `` · `"`) on a dedicated layer, mirrored on both hands.
@@ -55,8 +67,9 @@ Completes the symmetric bottom-row layer access: Z//(L7) · X/.(L10) · C/,(L9) 
 **L9 mirrored:** Code & CLI sequences now available from either hand. Previously
 right-hand only; the same finger on either hand now reaches the same sequence.
 
-**L1 Media simplified:** Play / Mute / Stop removed from home and bottom rows —
+**L1 Media simplified:** Play / Mute / Stop removed from the bottom row —
 they were already on the right thumb cluster. Duplication eliminated.
+</details>
 
 ## ✦ Design Decisions
 
@@ -68,7 +81,7 @@ they were already on the right thumb cluster. Duplication eliminated.
 
 1. Flash standard [Vial firmware](https://get.vial.today/) on your Corne Choc
 2. Open Vial desktop app, connect keyboard via USB
-3. **File → Load saved layout** → select the `.vil` file attached to this release
+3. **File → Load saved layout** → select `firmware/Cadenza-Corne-Pro_v0_8_1.vil` attached to this release
 4. OS keyboard layout must be set to **US International**
 
 ## ✦ Documentation

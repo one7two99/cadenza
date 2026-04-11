@@ -1,3 +1,25 @@
+## What changed in v0.8.1
+
+**L2 Navigation — `"` removed from inner home column**
+The double-quote character was previously placed on the right inner home position
+(the N-key slot on L2), reachable via Space hold → N. It served as a quick workaround
+for typing German Umlauts on a US International layout (dead `"` + vowel = ä/ö/ü).
+Now that L10 International provides dedicated Umlaut access on a proper layer, the L2
+shortcut is redundant. Removing it keeps the navigation layer focused on its purpose.
+
+**L3 Mouse — `TD(4)` removed from inner home column**
+The backtick / code-fence tap dance (TD(4): tap `` ` `` · double ```` ``` ````) was
+previously also reachable on the right inner home position of the mouse layer.
+Since v0.8.0 introduced L10 International which includes TD(4) on the middle finger,
+the L3 placement is no longer needed. The mouse layer inner home column is now empty.
+
+### Installation
+
+Load `Cadenza-Corne-Pro_v0_8_1.vil` via **File → Load saved layout** in Vial.
+OS keyboard layout must be set to **US International**.
+
+---
+
 ## What changed in v0.8.0
 
 **Added: Layer 10 — International Characters.**
@@ -22,7 +44,7 @@ TD(4) behaviour is unchanged (tap=`` ` `` · double=```` ``` ````). It was previ
 only on L3 inner column; it now also appears on L10 middle finger, making both the
 backtick and code-fence available from the International layer without adding a new TD.
 
-## Installation
+### Installation
 
-Load `Cadenza-Corne-Pro_v0_8.vil` via File → Load saved layout in Vial.
+Load `Cadenza-Corne-Pro_v0_8_0.vil` via File → Load saved layout in Vial.
 OS keyboard layout must be set to **US International**.
