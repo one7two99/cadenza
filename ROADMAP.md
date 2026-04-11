@@ -1,9 +1,16 @@
 # Cadenza Roadmap
 
-## v0.8 — Next milestone
+## v0.8 — Completed ✓
 
-- [ ] **L10 System / Workspace** — window management, virtual desktop switching,
-  screenshot, lock screen. Access: G hold (TD(18), tap=g · hold=MO(10))
+- [x] **L10 International Characters** — `\` · `|` · `` ` `` · `"` mirrored on both hands.
+  Access: Hold X (TD(2)) or Hold . (TD(12)) — ring-finger bottom row, both halves
+- [x] **L9 mirrored** — Code & CLI sequences now available from both hands
+- [x] **L1 Media simplified** — removed duplicate Play/Mute/Stop from home/bottom rows
+
+## v0.9 — Next milestone
+
+- [ ] **L11 System / Workspace** — window management, virtual desktop switching,
+  screenshot, lock screen. L10 is now International Characters; Workspace moves to L11
 - [ ] **Real-world tipping term data** — collect community timing preferences;
   consider whether 200/250 ms defaults are right for different typing speeds
 

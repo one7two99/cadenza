@@ -1,5 +1,20 @@
 # Changelog
 
+## [0.8.0] — 2026-04-11
+
+### Added
+- **Layer 10 — International Characters** (Hold X or Hold `.`) — `\` · `|` · `` ` ``/` ``` ` ` · `"` — mirrored on both hands.
+  Completes the symmetric bottom-row layer access pattern: pinky Z//(L7) · ring X/.(L10) · middle C/,(L9) · index D/H(L8)
+- **TD(2)** — `x` · MO(10) — X key now holds L10 (was an unused slot in v0.7)
+- **TD(12)** — `.` · MO(10) — period key now holds L10 (was an unused slot in v0.7)
+
+### Changed
+- **L9 Code & CLI — mirrored** — sequences now available on both halves. Previously right-hand only; the same finger on either hand now reaches the same sequence
+- **L1 Media — simplified** — Play / Mute / Stop removed from home and bottom rows (already on the right thumb cluster — duplication eliminated). Bri+ removed; rely on OS shortcut
+- **TD(4) redesigned** — was tap=`~/` · double=`` ` `` on L3 inner; now tap=`` ` `` (M2 dead-key fix) · double=` ``` ` (M3 code fence). Serves both L3 and L10 middle finger. `~/` is fully covered by TD(3) on L9
+
+---
+
 ## [0.7.0] — 2026-04-11
 
 ### Fixed
