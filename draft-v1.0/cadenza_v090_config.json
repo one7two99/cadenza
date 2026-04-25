@@ -1,0 +1,948 @@
+{
+  "metadata": {
+    "project": "Cadenza",
+    "version": "v0.9.0",
+    "semver": "v0.3.0",
+    "hardware": "Corne Choc 36 (crkbd)",
+    "firmware": "Vial v6 / QMK",
+    "base_layout": "Colemak-DH",
+    "os_layout_required": "US International",
+    "uid": "5010774632021243529",
+    "repo": "github.com/one7two99/cadenza",
+    "date": "2026-04"
+  },
+  "design_constraints": {
+    "no_inner_column": "G (left) and M (right) never used for layer content",
+    "no_top_row_content": "Top rows empty or ghost on all redesigned layers",
+    "no_sideways_movement": "All access keys require straight vertical finger movement only",
+    "finger_strength_order": "Strongest finger gets highest-frequency symbol/action",
+    "directional_consistency": "NEIO always maps to left/down/up/right across navigation layers"
+  },
+  "layer_access_keys": {
+    "note": "Assigned by usage frequency \u2014 most-used layer gets best access key",
+    "usage_priority": [
+      "L10 International",
+      "L4 Symbols",
+      "L5 Numbers"
+    ],
+    "assignments": [
+      {
+        "key": "Hold F or Hold U (middle finger up)",
+        "layer": "L11",
+        "type": "TD_F tap=F hold=MO11 \u00b7 TD_U tap=U hold=MO11",
+        "reason": "Tiling WM \u2014 comfortable middle finger stretch"
+      },
+      {
+        "key": "Space (left thumb middle)",
+        "layer": "L2",
+        "type": "LT2(KC_SPACE)",
+        "reason": "Navigation \u2014 most-used layer"
+      },
+      {
+        "key": "Tab (left thumb outer)",
+        "layer": "L3",
+        "type": "LT3(KC_TAB)",
+        "reason": "Mouse \u2014 rarely used"
+      },
+      {
+        "key": "Bsp (right thumb middle)",
+        "layer": "L4",
+        "type": "LT4(KC_BSPACE)",
+        "reason": "Symbols \u2014 2nd most used, easiest right thumb (no lateral)"
+      },
+      {
+        "key": "Ent (right thumb inner)",
+        "layer": "L5",
+        "type": "LT5(KC_ENTER)",
+        "reason": "Numbers \u2014 3rd most used"
+      },
+      {
+        "key": "Del (right thumb outer)",
+        "layer": "L6",
+        "type": "LT6(KC_DELETE)",
+        "reason": "Function keys \u2014 occasional"
+      },
+      {
+        "key": "Z (left pinky bottom)",
+        "layer": "L7",
+        "type": "TD(0) tap=Z hold=MO7",
+        "reason": "Clipboard \u2014 symmetric required"
+      },
+      {
+        "key": "Hold C or Hold , (middle fingers down)",
+        "layer": "L8",
+        "type": "TD(9) tap=C hold=MO8 \u00b7 TD(10) tap=, hold=MO8",
+        "reason": "Brackets \u2014 middle finger strongest symmetric bottom pair"
+      },
+      {
+        "key": "Hold X or Hold . (ring fingers \u2014 symmetric)",
+        "layer": "L9",
+        "type": "TD(2) tap=X hold=MO9 \u00b7 TD(12) tap=. hold=MO9",
+        "reason": "Code & CLI \u2014 now symmetric; ring fingers"
+      },
+      {
+        "key": ", (right middle bottom)",
+        "layer": "none",
+        "type": "KC_COMMA",
+        "reason": "Freed from L9 \u2014 available for future layer"
+      },
+      {
+        "key": "D (left index bottom)",
+        "layer": "L10",
+        "type": "TD(17) tap=D hold=MO10",
+        "reason": "International \u2014 promoted to index, German-primary typist"
+      },
+      {
+        "key": "Hold W (left ring top) or Hold Y (right ring top)",
+        "layer": "L1",
+        "type": "TD_W tap=W hold=MO1 \u00b7 TD_Y tap=Y hold=MO1",
+        "reason": "Ring top row \u2014 both halves accessible, left thumb cluster fully usable"
+      }
+    ]
+  },
+  "tap_dances": {
+    "TD0": {
+      "tap": "KC_Z",
+      "hold": "MO(7)",
+      "double": null,
+      "note": "Z / Clipboard"
+    },
+    "TD1": {
+      "tap": "KC_SLASH",
+      "hold": "MO(7)",
+      "double": null,
+      "note": "/ / Clipboard"
+    },
+    "TD2": {
+      "tap": "KC_X",
+      "hold": "MO(9)",
+      "double": null,
+      "note": "X / Code&CLI (was MO8 Brackets)"
+    },
+    "TD3": {
+      "tap": "KC_SLASH",
+      "hold": "M1",
+      "double": "M6",
+      "note": "Path nav: tap=/ hold=~/ double=../"
+    },
+    "TD4": {
+      "tap": "KC_GRAVE",
+      "hold": null,
+      "double": "M3",
+      "note": "backtick / code-fence triple"
+    },
+    "TD5": {
+      "tap": "LSFT(KC_9)",
+      "hold": "LSFT(KC_0)",
+      "double": null,
+      "note": "( / )"
+    },
+    "TD6": {
+      "tap": "KC_LBRACKET",
+      "hold": "KC_RBRACKET",
+      "double": null,
+      "note": "[ / ]"
+    },
+    "TD7": {
+      "tap": "LSFT(KC_COMMA)",
+      "hold": "LSFT(KC_DOT)",
+      "double": null,
+      "note": "< / >"
+    },
+    "TD8": {
+      "tap": "LSFT(KC_LBRACKET)",
+      "hold": "LSFT(KC_RBRACKET)",
+      "double": null,
+      "note": "{ / }"
+    },
+    "TD9": {
+      "tap": "KC_C",
+      "hold": "MO(8)",
+      "double": null,
+      "note": "C / Brackets (was MO9 Code&CLI)"
+    },
+    "TD10": {
+      "tap": "KC_COMMA",
+      "hold": "MO(8)",
+      "double": null,
+      "note": ", / Brackets (restored \u2014 was plain KC_COMMA)"
+    },
+    "TD11": {
+      "tap": "M8",
+      "hold": "M9",
+      "double": null,
+      "note": "$() tap / ${} hold"
+    },
+    "TD12": {
+      "tap": "KC_DOT",
+      "hold": "MO(9)",
+      "double": null,
+      "note": ". / Code&CLI (was MO8 Brackets)"
+    },
+    "TD16": {
+      "tap": "KC_H",
+      "hold": "MO(10)",
+      "double": null,
+      "note": "H / International (promoted from MO8)"
+    },
+    "TD17": {
+      "tap": "KC_D",
+      "hold": "MO(10)",
+      "double": null,
+      "note": "D / International (promoted from MO8)"
+    },
+    "TD18": {
+      "tap": "KC_G",
+      "hold": "KC_APPLICATION",
+      "double": null,
+      "note": "G / App/Menu"
+    },
+    "TD19": {
+      "tap": "KC_M",
+      "hold": "KC_APPLICATION",
+      "double": null,
+      "note": "M / App/Menu"
+    },
+    "TD20": {
+      "tap": "KC_T",
+      "hold": "KC_LSHIFT",
+      "double": null,
+      "note": "HRM T/Shift"
+    },
+    "TD21": {
+      "tap": "KC_S",
+      "hold": "KC_LCTRL",
+      "double": null,
+      "note": "HRM S/Ctrl"
+    },
+    "TD22": {
+      "tap": "KC_R",
+      "hold": "KC_LALT",
+      "double": null,
+      "note": "HRM R/Alt"
+    },
+    "TD23": {
+      "tap": "KC_A",
+      "hold": "KC_LGUI",
+      "double": null,
+      "note": "HRM A/Meta"
+    },
+    "TD24": {
+      "tap": "KC_N",
+      "hold": "KC_LSHIFT",
+      "double": null,
+      "note": "HRM N/Shift"
+    },
+    "TD25": {
+      "tap": "KC_E",
+      "hold": "KC_LCTRL",
+      "double": null,
+      "note": "HRM E/Ctrl"
+    },
+    "TD26": {
+      "tap": "KC_I",
+      "hold": "KC_RALT",
+      "double": null,
+      "note": "HRM I/AltGr"
+    },
+    "TD27": {
+      "tap": "KC_O",
+      "hold": "KC_LGUI",
+      "double": null,
+      "note": "HRM O/Meta"
+    },
+    "TD_F": {
+      "tap": "KC_F",
+      "hold": "MO(11)",
+      "double": null,
+      "note": "F / Tiling WM (was MO1 RGB&Media)"
+    },
+    "TD_U": {
+      "tap": "KC_U",
+      "hold": "MO(11)",
+      "double": null,
+      "note": "U / Tiling WM (was MO1 RGB&Media)"
+    },
+    "TD_W": {
+      "tap": "KC_W",
+      "hold": "MO(1)",
+      "double": null,
+      "note": "W / RGB&Media (replaces Esc which freed the left thumb)"
+    },
+    "TD_Y": {
+      "tap": "KC_Y",
+      "hold": "MO(1)",
+      "double": null,
+      "note": "Y / RGB&Media (symmetric with W, frees right thumb)"
+    }
+  },
+  "macros": {
+    "M0": {
+      "content": "[...]",
+      "note": "Ellipsis placeholder"
+    },
+    "M1": {
+      "content": "~/",
+      "note": "Home dir path (used by TD3 hold)"
+    },
+    "M2": {
+      "content": "` + space",
+      "note": "Dead backtick (grave+space for US Intl)"
+    },
+    "M3": {
+      "content": "``` + space x3",
+      "note": "Code fence triple backtick"
+    },
+    "M4": {
+      "content": "LSFT(KC_QUOTE) + space",
+      "note": "Dead diaeresis \" + space"
+    },
+    "M5": {
+      "content": " | ",
+      "note": "Pipe with spaces"
+    },
+    "M6": {
+      "content": "../",
+      "note": "Parent dir path (used by TD3 double)"
+    },
+    "M7": {
+      "content": " 2>&1 ",
+      "note": "Stderr redirect with spaces"
+    },
+    "M8": {
+      "content": "$() + KC_LEFT",
+      "note": "Shell expansion $() cursor inside"
+    },
+    "M9": {
+      "content": "${} + KC_LEFT",
+      "note": "Variable expansion ${} cursor inside"
+    },
+    "M_AND": {
+      "content": "&&",
+      "note": "And-chain (new for L9)"
+    },
+    "M_OR": {
+      "content": "||",
+      "note": "Or-chain (new for L9)"
+    },
+    "M_NEQ": {
+      "content": "!=",
+      "note": "Not-equal (new for L9)"
+    },
+    "M_EQ": {
+      "content": "==",
+      "note": "Equal comparison (new for L9)"
+    },
+    "M_ARR": {
+      "content": "=>",
+      "note": "Fat arrow (new for L9)"
+    },
+    "M_PTR": {
+      "content": "->",
+      "note": "Pointer/thin arrow (new for L9)"
+    },
+    "M_BETA": {
+      "content": "\u00df",
+      "note": "German sharp S (new for L10 left)"
+    },
+    "M_EURO": {
+      "content": "\u20ac",
+      "note": "Euro sign (new for L10 left)"
+    }
+  },
+  "layers": {
+    "L0": {
+      "name": "Base",
+      "access": "Always active",
+      "note": "Colemak-DH. All letter keys use Tap Dance for HRM and layer access.",
+      "left": {
+        "top": [
+          "KC_Q",
+          "KC_W",
+          "TD_F",
+          "KC_P",
+          "KC_B"
+        ],
+        "home": [
+          "TD(23)",
+          "TD(22)",
+          "TD(21)",
+          "TD(20)",
+          "TD(18)"
+        ],
+        "bottom": [
+          "TD(0)=Z/MO7",
+          "TD(2)=X/MO9",
+          "TD(9)=C/MO8",
+          "TD(17)=D/MO10",
+          "KC_V"
+        ],
+        "thumbs": [
+          "KC_ESCAPE (plain)",
+          "LT2(KC_SPACE)",
+          "LT3(KC_TAB)"
+        ]
+      },
+      "right": {
+        "top": [
+          "KC_J",
+          "KC_L",
+          "TD_U",
+          "KC_Y",
+          "KC_QUOTE"
+        ],
+        "home": [
+          "TD(19)",
+          "TD(24)",
+          "TD(25)",
+          "TD(26)",
+          "TD(27)"
+        ],
+        "bottom": [
+          "KC_K",
+          "TD(16)=H/MO10",
+          "TD(10)=,/MO8",
+          "TD(12)=./MO9",
+          "TD(1)=//MO7"
+        ],
+        "thumbs": [
+          "LT4(KC_BSPACE)",
+          "LT5(KC_ENTER)",
+          "LT6(KC_DELETE)"
+        ]
+      }
+    },
+    "L1": {
+      "name": "RGB and Media",
+      "access": "Hold W or Hold Y (ring finger top row \u2014 both thumbs free on this layer)",
+      "note": "Left = RGB controls. Right = Media controls. No modifiers.",
+      "left": {
+        "top": [
+          "KC_NO",
+          "KC_NO",
+          "KC_NO",
+          "KC_NO",
+          "KC_NO"
+        ],
+        "home": [
+          "RGB_VAI",
+          "RGB_SAI",
+          "RGB_HUI",
+          "KC_BRIU",
+          "KC_NO"
+        ],
+        "bottom": [
+          "RGB_VAD",
+          "RGB_SAD",
+          "RGB_HUD",
+          "KC_BRID",
+          "KC_NO"
+        ],
+        "thumbs": [
+          "RGB_RMOD",
+          "RGB_TOG",
+          "RGB_MOD"
+        ]
+      },
+      "right": {
+        "top": [
+          "KC_NO",
+          "KC_MPRV",
+          "KC_VOLD",
+          "KC_VOLU",
+          "KC_MNXT"
+        ],
+        "home": [
+          "KC_NO",
+          "KC_NO",
+          "KC_NO",
+          "KC_NO",
+          "KC_NO"
+        ],
+        "bottom": [
+          "KC_NO",
+          "KC_BRID",
+          "KC_MUTE",
+          "KC_MPLY",
+          "KC_MSTP"
+        ],
+        "thumbs": [
+          "KC_MUTE",
+          "KC_MPLY",
+          "KC_MSTP"
+        ]
+      }
+    },
+    "L2": {
+      "name": "Navigation",
+      "access": "Hold Space",
+      "note": "Unchanged from v0.8.1. Arrows NEIO, clipboard top-right, modifiers left.",
+      "left": {
+        "home": [
+          "KC_LGUI",
+          "KC_LALT",
+          "KC_LCTRL",
+          "LSFT_T(KC_CAPSLOCK)",
+          "KC_APPLICATION"
+        ],
+        "bottom": [
+          "KC_NO",
+          "KC_RALT",
+          "KC_NO",
+          "KC_NO",
+          "KC_INSERT"
+        ]
+      },
+      "right": {
+        "top": [
+          "KC_UNDO",
+          "KC_CUT",
+          "KC_COPY",
+          "KC_PSTE",
+          "KC_AGIN"
+        ],
+        "home": [
+          "KC_LEFT",
+          "KC_DOWN",
+          "KC_UP",
+          "KC_RIGHT",
+          "KC_NO"
+        ],
+        "bottom": [
+          "KC_HOME",
+          "KC_PGDN",
+          "KC_PGUP",
+          "KC_END",
+          "KC_NO"
+        ]
+      }
+    },
+    "L3": {
+      "name": "Mouse",
+      "access": "Hold Tab",
+      "note": "Unchanged from v0.8.1.",
+      "left": {
+        "home": [
+          "KC_LGUI",
+          "KC_LALT",
+          "KC_LCTRL",
+          "KC_LSHIFT",
+          "KC_APPLICATION"
+        ],
+        "bottom": [
+          "KC_NO",
+          "KC_RALT",
+          "KC_NO",
+          "KC_NO",
+          "KC_NO"
+        ]
+      },
+      "right": {
+        "top": [
+          "KC_UNDO",
+          "KC_CUT",
+          "KC_COPY",
+          "KC_PSTE",
+          "KC_AGIN"
+        ],
+        "home": [
+          "KC_MS_L",
+          "KC_MS_D",
+          "KC_MS_U",
+          "KC_MS_R",
+          "KC_NO"
+        ],
+        "bottom": [
+          "KC_WH_L",
+          "KC_WH_D",
+          "KC_WH_U",
+          "KC_WH_R",
+          "KC_NO"
+        ],
+        "thumbs": [
+          "KC_BTN1",
+          "KC_BTN2",
+          "KC_BTN3"
+        ]
+      }
+    },
+    "L4": {
+      "name": "Symbols",
+      "access": "Hold Bsp (right thumb middle \u2014 swapped from Enter)",
+      "note": "Frequency + finger-strength ordered. Home row ranks 1-8. No inner column.",
+      "left": {
+        "top": [
+          "ghost",
+          "ghost",
+          "ghost",
+          "ghost",
+          "ghost"
+        ],
+        "home": [
+          "LSFT(KC_3)",
+          "LSFT(KC_MINUS)",
+          "LSFT(KC_1)",
+          "KC_EQUAL",
+          "ghost"
+        ],
+        "note_home": "A=# R=_ S=! T== (rank 4,2,3,1)",
+        "bottom": [
+          "ghost",
+          "LSFT(KC_GRAVE)",
+          "LSFT(KC_EQUAL)",
+          "LSFT(KC_SCOLON)",
+          "ghost"
+        ],
+        "note_bottom": "X=~ C=+ D=: (Z and V spare)"
+      },
+      "right": {
+        "top": [
+          "ghost",
+          "ghost",
+          "ghost",
+          "ghost",
+          "ghost"
+        ],
+        "home": [
+          "ghost",
+          "LSFT(KC_4)",
+          "LSFT(KC_2)",
+          "LSFT(KC_5)",
+          "LSFT(KC_7)"
+        ],
+        "note_home": "N=$ E=@ I=% O=& (rank 5,6,7,8)",
+        "bottom": [
+          "ghost",
+          "LSFT(KC_8)",
+          "LSFT(KC_6)",
+          "LSFT(KC_SCOLON)",
+          "ghost"
+        ],
+        "note_bottom": "N=* E=^ I=; (H and / spare)",
+        "thumbs": [
+          "KC_BSPACE",
+          "KC_ENTER",
+          "KC_DELETE"
+        ]
+      },
+      "spare_slots": [
+        "Z (left pinky bottom)",
+        "O (right pinky bottom)"
+      ]
+    },
+    "L5": {
+      "name": "Numbers",
+      "access": "Hold Ent (right thumb inner \u2014 swapped from Bsp)",
+      "note": "Numpad grid. Minor change: U=KP+, L=(. Unchanged otherwise.",
+      "left": {
+        "top": [
+          "KC_LBRACKET",
+          "KC_7",
+          "KC_8",
+          "KC_9",
+          "KC_RBRACKET"
+        ],
+        "home": [
+          "KC_SCOLON",
+          "KC_4",
+          "KC_5",
+          "KC_6",
+          "KC_EQUAL"
+        ],
+        "bottom": [
+          "KC_GRAVE",
+          "KC_1",
+          "KC_2",
+          "KC_3",
+          "KC_BSLASH"
+        ],
+        "thumbs": [
+          "KC_DOT",
+          "KC_0",
+          "KC_MINUS"
+        ]
+      },
+      "right": {
+        "top": [
+          "ghost",
+          "KC_KP_ASTERISK",
+          "KC_KP_PLUS",
+          "LSFT(KC_9)",
+          "ghost"
+        ],
+        "note": "U=KP+ L=( M=empty (changed from v0.8.1)",
+        "home": [
+          "ghost",
+          "KC_LGUI",
+          "KC_LALT",
+          "KC_LCTRL",
+          "KC_LSHIFT"
+        ],
+        "bottom": [
+          "KC_SLASH",
+          "KC_DOT",
+          "KC_COMMA",
+          "KC_EQUAL",
+          "ghost"
+        ]
+      }
+    },
+    "L6": {
+      "name": "Function Keys",
+      "access": "Hold Del",
+      "note": "Unchanged from v0.8.1.",
+      "left": {
+        "top": [
+          "KC_F12",
+          "KC_F7",
+          "KC_F8",
+          "KC_F9",
+          "KC_PSCREEN"
+        ],
+        "home": [
+          "KC_F11",
+          "KC_F4",
+          "KC_F5",
+          "KC_F6",
+          "KC_SCROLLLOCK"
+        ],
+        "bottom": [
+          "KC_F10",
+          "KC_F1",
+          "KC_F2",
+          "KC_F3",
+          "KC_PAUSE"
+        ]
+      },
+      "right": {
+        "home": [
+          "ghost",
+          "KC_LGUI",
+          "KC_LALT",
+          "KC_LCTRL",
+          "KC_LSHIFT"
+        ],
+        "bottom": [
+          "ghost",
+          "KC_RALT",
+          "ghost",
+          "ghost",
+          "ghost"
+        ]
+      }
+    },
+    "L7": {
+      "name": "Clipboard",
+      "access": "Hold Z or Hold / (symmetric \u2014 both hands)",
+      "note": "Identical content on both sides. Unchanged from v0.8.1.",
+      "both_sides": {
+        "top": [
+          "KC_UNDO",
+          "KC_CUT",
+          "KC_COPY",
+          "KC_PSTE",
+          "KC_AGIN"
+        ],
+        "home": [
+          "KC_LGUI",
+          "KC_LALT",
+          "KC_LCTRL",
+          "KC_LSHIFT",
+          "KC_APPLICATION"
+        ],
+        "bottom": [
+          "KC_UNDO",
+          "KC_CUT",
+          "KC_COPY",
+          "KC_PSTE",
+          "KC_AGIN"
+        ]
+      }
+    },
+    "L8": {
+      "name": "Bracket Pairs",
+      "access": "Hold C or Hold , (middle fingers down \u2014 was X/.)",
+      "note": "Tap=open, hold=close. Content unchanged, access key changed.",
+      "both_sides": {
+        "home": [
+          "TD(8)",
+          "TD(7)",
+          "TD(6)",
+          "TD(5)",
+          "ghost"
+        ],
+        "note": "A/N={ E/O=< I/I=[ O/O=( with hold for closing pair"
+      }
+    },
+    "L9": {
+      "name": "Code and CLI",
+      "access": "Hold X or Hold . (ring fingers \u2014 symmetric, was C only)",
+      "note": "Redesigned. Left=shell operators, Right=path/expansion/comparison/arrows.",
+      "left": {
+        "home": [
+          "ghost",
+          "M_PIPE",
+          "M_AND",
+          "M_OR",
+          "M_STDERR"
+        ],
+        "note": "A=ghost R=\u00b7|\u00b7 S=&& T=|| G=2>&1 (home row only)"
+      },
+      "right": {
+        "home": [
+          "ghost",
+          "TD(3)",
+          "TD(11)",
+          "M_NEQ+M_EQ",
+          "M_ARR+M_PTR",
+          "ghost"
+        ],
+        "note": "N=TD3(//..//~/) E=TD11($()/${}) I=!=/== O=>/->'",
+        "bottom_N": "M_EXIT ($?)"
+      },
+      "td3_detail": "tap=KC_SLASH hold=M1(~/) double=M6(../)"
+    },
+    "L10": {
+      "name": "International Characters",
+      "access": "Hold D or Hold H (index fingers \u2014 promoted from ring)",
+      "note": "Both sides populated. D holds\u2192right free. H holds\u2192left free.",
+      "left": {
+        "note": "Active when holding H (right index) \u2014 left hand types",
+        "home": [
+          "KC_MINUS",
+          "M_EURO",
+          "M_BETA",
+          "LSFT(KC_QUOTE)",
+          "ghost"
+        ],
+        "note_home": "A=hyphen R=\u20ac S=\u00df T=\" dead key (strongest=umlaut)",
+        "bottom": [
+          "ghost",
+          "ghost",
+          "ghost",
+          "KC_GRAVE",
+          "ghost"
+        ],
+        "note_bottom": "D=backtick"
+      },
+      "right": {
+        "note": "Active when holding D (left index) \u2014 right hand types",
+        "home": [
+          "ghost",
+          "LSFT(KC_QUOTE)",
+          "TD(4)",
+          "LSFT(KC_BSLASH)",
+          "KC_BSLASH"
+        ],
+        "note_home": "N=\" dead key E=`/``` I=| O=\\",
+        "bottom": [
+          "ghost",
+          "KC_QUOTE",
+          "ghost",
+          "ghost",
+          "ghost"
+        ],
+        "note_bottom": "H=apostrophe"
+      },
+      "key_insight": "\" dead key on both T (left) and N (right) \u2014 umlaut always accessible from free hand"
+    },
+    "L11": {
+      "name": "Tiling WM",
+      "access": "Hold F or Hold U (middle finger up \u2014 was Esc)",
+      "note": "New in v0.9.0. i3/Sway workspace and window management.",
+      "left": {
+        "home": [
+          "LGUI(KC_1)",
+          "LGUI(KC_2)",
+          "LGUI(KC_3)",
+          "LGUI(KC_4)",
+          "ghost"
+        ],
+        "note_home": "A=WS1 R=WS2 S=WS3 T=WS4 \u2014 go to workspace",
+        "bottom": [
+          "LGUI(LSFT(KC_1))",
+          "LGUI(LSFT(KC_2))",
+          "LGUI(LSFT(KC_3))",
+          "LGUI(LSFT(KC_4))",
+          "ghost"
+        ],
+        "note_bottom": "Z=\u2192WS1 X=\u2192WS2 C=\u2192WS3 D=\u2192WS4 \u2014 move window to workspace",
+        "thumbs": [
+          "ghost",
+          "ghost",
+          "ghost"
+        ],
+        "note_thumbs": "Esc is held \u2014 left thumbs unavailable"
+      },
+      "right": {
+        "home": [
+          "ghost",
+          "LGUI(LSFT(KC_LEFT))",
+          "LGUI(LSFT(KC_DOWN))",
+          "LGUI(LSFT(KC_UP))",
+          "LGUI(LSFT(KC_RIGHT))"
+        ],
+        "note_home": "N=win\u2190 E=win\u2193 I=win\u2191 O=win\u2192 \u2014 move window within workspace",
+        "thumbs": [
+          "LGUI(KC_F)",
+          "LGUI(KC_SPACE)",
+          "ghost"
+        ],
+        "note_thumbs": "Ent=fullscreen Bsp=float toggle"
+      }
+    }
+  },
+  "vial_programming_checklist": {
+    "L0_changes": [
+      "Y key: add TD_Y (tap=Y, hold=MO1)",
+      "W key: add TD_W (tap=W, hold=MO1)",
+      "Esc thumb: restore to plain KC_ESCAPE (no layer hold)",
+      "F key: TD_F hold=MO1 \u2192 MO11",
+      "U key: TD_U hold=MO1 \u2192 MO11",
+      "C key: TD9 hold=MO9 \u2192 MO8 (brackets)",
+      "Comma: was plain KC_COMMA \u2192 TD10 tap=comma hold=MO8",
+      "X key: TD2 hold=MO8 \u2192 MO9 (code&CLI)",
+      ". key: TD12 hold=MO8 \u2192 MO9 (code&CLI)",
+      "D key: TD17 hold=MO10 unchanged",
+      "H key: TD16 hold=MO10 unchanged",
+      "Bsp thumb: LT5 \u2192 LT4 (symbols)",
+      "Ent thumb: LT4 \u2192 LT5 (numbers)"
+    ],
+    "L1_changes": [
+      "Clear ALL existing keys",
+      "Left home: A=RGB_VAI R=RGB_SAI S=RGB_HUI T=KC_BRIU",
+      "Left bottom: Z=RGB_VAD X=RGB_SAD C=RGB_HUD D=KC_BRID",
+      "Left thumbs: Esc=RGB_RMOD Spc=RGB_TOG Tab=RGB_MOD",
+      "Right home: N=KC_MPRV E=KC_VOLD I=KC_VOLU O=KC_MNXT",
+      "Right thumbs: Ent=KC_MUTE Bsp=KC_MPLY Del=KC_MSTP"
+    ],
+    "L4_changes": [
+      "Clear ALL existing keys",
+      "Left home: A=LSFT(KC_3) R=LSFT(KC_MINUS) S=LSFT(KC_1) T=KC_EQUAL",
+      "Left bottom: X=LSFT(KC_GRAVE) C=LSFT(KC_EQUAL) D=LSFT(KC_SCOLON)",
+      "Right home: N=LSFT(KC_4) E=LSFT(KC_2) I=LSFT(KC_5) O=LSFT(KC_7)",
+      "Right bottom: N=LSFT(KC_8) E=LSFT(KC_6) I=LSFT(KC_SCOLON)"
+    ],
+    "L9_changes": [
+      "Left home: A=M5(pipe) R=M_AND S=M_OR T=M7(2>&1)",
+      "Right home N: TD3 (tap=/ hold=~/ double=../)",
+      "Right home E: TD11 ($()/${})",
+      "Right home I: macro != / ==",
+      "Right home O: macro => / ->",
+      "Right bottom N: macro $?",
+      "Update TD3: tap=KC_SLASH hold=M1 double=M6"
+    ],
+    "L10_changes": [
+      "Left home: A=KC_MINUS R=M_EURO S=M_BETA T=LSFT(KC_QUOTE)",
+      "Left bottom D: KC_GRAVE (backtick)",
+      "Right home: N=LSFT(KC_QUOTE) E=TD4 I=LSFT(KC_BSLASH) O=KC_BSLASH",
+      "Right bottom H: KC_QUOTE"
+    ],
+    "L11_new": [
+      "Left home: A=LGUI(1) R=LGUI(2) S=LGUI(3) T=LGUI(4)",
+      "Left bottom: Z=LGUI(LSFT(1)) X=LGUI(LSFT(2)) C=LGUI(LSFT(3)) D=LGUI(LSFT(4))",
+      "Right home: N=LGUI(LSFT(LEFT)) E=LGUI(LSFT(DOWN)) I=LGUI(LSFT(UP)) O=LGUI(LSFT(RIGHT))",
+      "Right Ent=LGUI(KC_F) Bsp=LGUI(KC_SPACE)"
+    ]
+  }
+}
