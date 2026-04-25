@@ -43,6 +43,18 @@ Full changelog: [VERSIONING.md](VERSIONING.md)
 
 ---
 
+## ✦ Support
+
+Cadenza is free and open source — designed, tested, and maintained in spare time on a 36-key keyboard.
+
+If it saved your wrists, spared your carpal tunnel surgeon a visit, or simply made typing feel less like a crime against ergonomics — a coffee would make the author very happy. It won't fund a yacht, but it will absolutely fund the next tap dance slot.
+
+**[☕ Buy the author a coffee on Ko-fi](https://ko-fi.com/one7two99)**
+
+> *36 keys. Zero revenue. Infinite tap dances.*
+
+---
+
 ## ✦ Highlights
 
 - **Home Row Mods via Tap Dance** — per-key tipping terms (250 ms ring/pinky · 200 ms index/middle)
@@ -56,9 +68,20 @@ Full changelog: [VERSIONING.md](VERSIONING.md)
 
 ---
 
+## ✦ Documentation
+
+| Document | Description |
+|---|---|
+| **[docs/index.html](https://one7two99.github.io/cadenza)** | Full design documentation — layer cards with keyboard diagrams, design decisions, TD/macro reference, vs. Miryoku comparison |
+| **[docs/cadenza-viewer-v1.0.0.html](docs/cadenza-viewer-v1.0.0.html)** | Interactive layer viewer — switch between all 13 layers, layer overview, TD & Macro reference with layer highlighting, Design Philosophy tab |
+| **[VERSIONING.md](VERSIONING.md)** | Semantic versioning policy and complete version history |
+| **[ROADMAP.md](ROADMAP.md)** | Planned milestones — v1.0.x patches, v1.1 features, v2.0 QMK migration |
+
+---
+
 ## ✦ Layer Overview
 
-Full interactive reference: **[docs/cadenza-viewer-v1.0.0.html](docs/cadenza-viewer-v1.0.0.html)**
+Full interactive reference: **[docs/cadenza-viewer-v1.0.0.html](https://one7two99.github.io/cadenza/cadenza-viewer-v1.0.0.html)**
 Full design documentation: **[docs/index.html](https://one7two99.github.io/cadenza)**
 
 | # | Layer | Access key(s) | Purpose |
@@ -143,17 +166,6 @@ Set your OS keyboard layout to **US International**. This is required for:
 
 ---
 
-## ✦ Documentation
-
-| Document | Description |
-|---|---|
-| **[docs/index.html](https://one7two99.github.io/cadenza)** | Full design documentation — layer cards with keyboard diagrams, design decisions, TD/macro reference, vs. Miryoku comparison |
-| **[docs/cadenza-viewer-v1.0.0.html](docs/cadenza-viewer-v1.0.0.html)** | Interactive layer viewer — switch between all 13 layers, layer overview, TD & Macro reference with layer highlighting, Design Philosophy tab |
-| **[VERSIONING.md](VERSIONING.md)** | Semantic versioning policy and complete version history |
-| **[ROADMAP.md](ROADMAP.md)** | Planned milestones — v1.0.x patches, v1.1 features, v2.0 QMK migration |
-
----
-
 ## ✦ Resource Budget
 
 | Resource | Used | Available | Free |
@@ -183,18 +195,6 @@ Full versioning policy and change log: [VERSIONING.md](VERSIONING.md)
 ## ✦ Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). Ports, language variants, and usage reports are especially welcome. Open a Discussion tagged `roadmap` to suggest future features.
-
----
-
-## ✦ Support
-
-Cadenza is free and open source — designed, tested, and maintained in spare time on a 36-key keyboard.
-
-If it saved your wrists, spared your carpal tunnel surgeon a visit, or simply made typing feel less like a crime against ergonomics — a coffee would make the author very happy. It won't fund a yacht, but it will absolutely fund the next tap dance slot.
-
-**[☕ Buy the author a coffee on Ko-fi](https://ko-fi.com/one7two99)**
-
-> *36 keys. Zero revenue. Infinite tap dances.*
 
 ---
 
