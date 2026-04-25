@@ -19,3 +19,8 @@ Place files in `firmware/ports/<keyboard>/`, include a README documenting differ
 
 ## Attribution
 All contributors listed in CONTRIBUTORS.md once the first external contribution arrives.
+
+---
+
+*Cadenza is free — but coffees power tap dances.*
+**[☕ Support on Ko-fi](https://ko-fi.com/one7two99)**

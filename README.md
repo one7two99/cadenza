@@ -2,10 +2,12 @@
   <img src="assets/cadenza-banner-final.png" width="620" alt="Cadenza Banner"/>
   <br><br>
   <p>
-    <img src="https://img.shields.io/badge/version-0.8.1-brightgreen?style=flat-square" alt="Version">
+    <img src="https://img.shields.io/badge/version-1.0.0-brightgreen?style=flat-square" alt="Version">
     <img src="https://img.shields.io/badge/keyboard-Corne%20Choc%2036-blue?style=flat-square" alt="Keyboard">
     <img src="https://img.shields.io/badge/firmware-Vial%20%2F%20QMK-orange?style=flat-square" alt="Firmware">
+    <img src="https://img.shields.io/badge/MCU-RP2040-red?style=flat-square" alt="MCU">
     <img src="https://img.shields.io/badge/base-Colemak--DH-purple?style=flat-square" alt="Base">
+    <img src="https://img.shields.io/badge/tap%20dances-43%20%2F%2048-yellow?style=flat-square" alt="Tap Dances">
     <img src="https://img.shields.io/github/license/one7two99/cadenza?style=flat-square" alt="License">
   </p>
 </div>
@@ -14,83 +16,155 @@
 
 > *Cadenza (n.): a brilliant, technically demanding solo passage — calling for precision timing and controlled technique.*
 
-**Cadenza** is a 36-key split keyboard layout for the [Corne Choc](https://github.com/foostan/crkbd), built on [Colemak-DH](https://colemakmods.github.io/mod-dh/) and configured entirely in [Vial](https://get.vial.today/). It uses Tap Dance throughout — for Home Row Mods, bracket pairs, and layer access — keeping every key within reach of the home position without moving your wrists.
+**Cadenza** is a 36-key split keyboard layout for the [Corne Choc](https://github.com/foostan/crkbd), built on [Colemak-DH](https://colemakmods.github.io/mod-dh/) and configured in [Vial](https://get.vial.today/). Every key stays within reach of the home position — no wrist movement, no arm travel.
 
-Heavily inspired by [Miryoku](https://github.com/manna-harbour/miryoku), but with per-finger tipping terms, symmetric layer access from either hand, and a dedicated Code & CLI layer built for daily systems work.
+Inspired by [Miryoku](https://github.com/manna-harbour/miryoku), but redesigned from the ground up with per-finger tipping terms, frequency-ranked symbol placement, bilateral layer access from either hand, a dedicated Code & CLI layer, a complete International layer for German, and two Tiling Window Manager layers for i3/Sway.
 
 > *36 keys. A tap dance for the typing elite.*
 
+---
+
+## ✦ What's new in v1.0.0
+
+v1.0.0 is the **stability declaration** — all planned core layers are complete and verified. It is a breaking release from v0.8.x: existing `.vil` files are not compatible.
+
+**Key changes from v0.8.1:**
+
+- **Firmware** — custom Vial-QMK build required: `TAP_DANCE_ENTRIES 48` (up from 32). 43/48 TD slots used. All 16 macro slots used.
+- **L0 Base** — Bsp/Ent reassigned correctly (Bsp→Symbols, Ent→Numbers). Esc restored to plain key. New top-row layer access: W/Y→L1, F/U→L11, L→L12.
+- **L1 RGB & Media** — full redesign. Access via Hold W / Hold Y so all thumb keys remain free on the layer.
+- **L4 Symbols** — Miryoku numpad grid replaced with Frequency+Strength layout. `=` (most used) on T (strongest finger).
+- **L9 Code & CLI** — operator TDs corrected, new macros M10–M15 (`&&`, `||`, `!=`, `==`, `=>`, `->`).
+- **L10 International** — full bilateral redesign. Access promoted to D/H (index fingers). Left side added: ß, €, −, `"` dead key. No macros needed for ß/€ — direct RALT keycodes.
+- **L11 Tiling WM — Quick** *(new)* — WS 1–4 via F/U. Focus switching and window movement on right hand. Kill/Float/Fullscreen on all thumbs, both sides.
+- **L12 Tiling WM — Full Map** *(new)* — WS 1–10 via L. Numpad muscle memory from L5. Tap = go · Hold = move window.
+
+Full changelog: [VERSIONING.md](VERSIONING.md)
+
+---
+
 ## ✦ Highlights
 
-- **Home Row Mods via Tap Dance** — per-key tipping terms (250 ms outer · 200 ms inner fingers)
-- **11 layers** — alpha, mods/media, navigation, mouse, symbols, numbers, function keys, clipboard, brackets, code/CLI, international characters
-- **Symmetric layer access** — L7/L8/L9/L10 reachable from either hand independently
-- **Unified numpad grid** — L4, L5, L6 share the same physical layout shape
-- **Code & CLI layer (L9)** — mirrored on both hands: ` | ` · `~/`/`../` · ` 2>&1 ` · `$()`/`${}`
-- **International layer (L10)** — `\` · `|` · `` ` `` · `"` — dead-key workarounds for US International, both hands
-- **Vial-native** — all layers, macros, and tap dance fully editable in Vial without any firmware rebuild
+- **Home Row Mods via Tap Dance** — per-key tipping terms (250 ms ring/pinky · 200 ms index/middle)
+- **13 layers** — alpha, RGB/media, navigation, mouse, symbols, numbers, F-keys, clipboard, brackets, code/CLI, international, tiling WM quick, tiling WM full
+- **Frequency + Strength symbols** — most-used symbol on strongest finger, documented ranking
+- **No inner column** — G/M never used for layer content; only vertical finger movement for layer access
+- **Bilateral layer access** — L7/L8/L9/L10/L11 reachable from either hand independently
+- **Code & CLI layer (L9)** — `||` · `2>&1` · `&&` · ` | ` · `/` / `~/` / `../` · `$()` / `${}` · `!=` / `==` · `=>` / `->`
+- **International layer (L10)** — ä/ö/ü via `"` dead key, ß, €, `` ` ``, `|`, `\`, `'` — bilateral access, no macros for ß/€
+- **Tiling WM integration (L11 + L12)** — WS 1–10, focus switching, window movement, Kill/Float/Fullscreen
+
+---
 
 ## ✦ Layer Overview
 
-See **[docs/Cadenza-Layout.html](https://one7two99.github.io/cadenza)** for all layer screenshots.
+Full interactive reference: **[docs/cadenza-viewer-v1.0.0.html](docs/cadenza-viewer-v1.0.0.html)**
+Full design documentation: **[docs/index.html](https://one7two99.github.io/cadenza)**
 
-| # | Layer | Activation | Purpose |
+| # | Layer | Access key(s) | Purpose |
 |---|---|---|---|
-| L0 | Base | — | Colemak-DH + Home Row Mods |
-| L1 | Mods & Media | Hold ESC | Modifiers · RGB · Media |
-| L2 | Navigation | Hold Space | Cursor · Clipboard · Selection |
-| L3 | Mouse | Hold Tab | Pointer · Scroll · Buttons |
-| L4 | Shift Symbols | Hold Enter | Shifted symbol row (numpad layout) |
-| L5 | Numbers | Hold Backspace | Numbers + operators (numpad layout) |
-| L6 | Function Keys | Hold Delete | F1–F12 (numpad layout) |
-| L7 | Clipboard | Hold Z *or* Hold `/` | System clipboard — both hands · left half has two clipboard rows |
-| L8 | Bracket Pairs | Hold D *or* Hold H | Bracket tap/hold pairs — mirrored, same finger = same bracket both hands |
-| L9 | Code & CLI | Hold C *or* Hold `,` | Shell & code sequences — both hands (mirrored) |
-| L10 | International | Hold X *or* Hold `.` | `\` · `\|` · `` ` `` · `"` — both hands (mirrored) |
+| L0 | Base | — | Colemak-DH + Tap Dance HRM |
+| L1 | RGB & Media | Hold **W** or Hold **Y** | RGB control · Media playback · Screen brightness |
+| L2 | Navigation | Hold **Space** | Arrows · Home/End/PgUp/PgDn · Clipboard |
+| L3 | Mouse | Hold **Tab** | Pointer · Scroll · Buttons |
+| L4 | Symbols | Hold **Bsp** | Frequency+Strength symbol layout |
+| L5 | Numbers | Hold **Ent** | Numpad layout · operators |
+| L6 | Function Keys | Hold **Del** | F1–F12 · PrtSc · ScrLk · Pause |
+| L7 | Clipboard | Hold **Z** *or* Hold **/** | Undo/Cut/Copy/Paste/Redo — symmetric, both hands |
+| L8 | Bracket Pairs | Hold **C** *or* Hold **,** | `(` `)` `[` `]` `<` `>` `{` `}` — tap/hold, both hands |
+| L9 | Code & CLI | Hold **X** *or* Hold **.** | Shell operators · path navigation · expansion macros |
+| L10 | International | Hold **D** *or* Hold **H** | ä/ö/ü · ß · € · `` ` `` · `\|` · `\` · `'` — bilateral |
+| L11 | Tiling WM — Quick | Hold **F** *or* Hold **U** | WS 1–4 · focus · window move · Kill/Float/Full |
+| L12 | Tiling WM — Full | Hold **L** | WS 1–10 · numpad memory · tap=go · hold=move |
 
-## ✦ What changed in v0.8.1
+### Access key design principle
 
-**L2 Navigation — `"` removed from inner home row.**
-The double-quote shortcut on the N-key position (right inner home) has been removed.
-German Umlaut input is now handled exclusively by the International layer (L10),
-making L2 cleaner and avoiding the redundancy.
+Access keys are assigned by **usage frequency × ergonomic quality**. The right thumb middle (Bsp) earns L4 Symbols because it requires no lateral movement. D/H (strongest index pair) earns L10 International because German umlauts appear in every sentence. G and M are never used for layer access — the lateral stretch destabilises hand position.
 
-**L3 Mouse — `TD(4)` removed from inner home row.**
-The backtick/code-fence tap dance is now available on L10 (middle finger), making
-the L3 placement redundant. Inner home row on the mouse layer is now empty.
-
-<details>
-<summary>What changed in v0.8.0</summary>
-
-**Layer 10 — International Characters:** dead-key and hard-to-reach characters
-(`\` · `|` · `` ` `` · `"`) on a dedicated layer, mirrored on both hands.
-Access: Hold X (left ring bottom) or Hold . (right ring bottom).
-Completes the symmetric bottom-row layer access: Z//(L7) · X/.(L10) · C/,(L9) · D/H(L8).
-
-**L9 mirrored:** Code & CLI sequences now available from either hand. Previously
-right-hand only; the same finger on either hand now reaches the same sequence.
-
-**L1 Media simplified:** Play / Mute / Stop removed from the bottom row —
-they were already on the right thumb cluster. Duplication eliminated.
-</details>
+---
 
 ## ✦ Design Decisions
 
-**Vial-native constraint:** Cadenza stays within Vial's 16 macro slots. Increasing this requires a custom firmware build, which breaks portability — the `.vil` file would only restore correctly on keyboards running that exact custom build. Staying within 16 means load, edit, and restore always works with the standard Vial app. This constraint shaped L9: only genuinely complex multi-character sequences earn a macro slot.
+**Frequency + Strength (L4 Symbols):** Symbols are ranked by daily usage frequency in German IT writing, then assigned to fingers in strength order. `=` (rank 1) sits on T (strongest left index). `&` (rank 8) sits on O (weakest right pinky). No arbitrary numpad-position inheritance.
 
-**Middle finger vs index finger for L9 access:** Holding C or , (middle finger down one row) was preferred over G or M (index finger laterally to inner column). The index finger anchors hand position; moving it sideways destabilizes the hand. The middle finger's natural motion is vertical — the same movement used to type C or , in normal typing.
+**W/Y for RGB & Media (L1):** Hold Esc was the previous access key — but holding Esc blocked the entire left thumb cluster, which is needed for Mode/Toggle/RGB on that layer. W and Y (ring fingers, top row) leave all six thumb keys free.
+
+**D/H promoted for International (L10):** Previously X/. (ring fingers). The index fingers are stronger and the bilateral access pattern `"` dead key on both T (left) and N (right) means umlaut input works regardless of which hand holds the layer.
+
+**Two WM layers instead of one:** L11 gives reflex-speed access to WS 1–4 (the four workspaces most people use daily). L12 gives the full WS 1–10 map using the numpad positions from L5 — no new muscle memory required, just a different layer key.
+
+**No inner column for layer content:** G and M require a lateral inward index stretch — the same problem Colemak-DH solved by moving B and H. Cadenza extends this principle: G/M carry only their letters and App/Menu, never layer content.
+
+---
 
 ## ✦ Installation
 
-1. Flash standard [Vial firmware](https://get.vial.today/) on your Corne Choc
-2. Open Vial desktop app, connect keyboard via USB
-3. **File → Load saved layout** → select `firmware/Cadenza-Corne-Pro_v0_8_1.vil` attached to this release
-4. OS keyboard layout must be set to **US International**
+### Requirements
+
+- Corne Choc (crkbd) with **RP2040** MCU
+- Custom Vial-QMK firmware with `TAP_DANCE_ENTRIES 48` (see below)
+- OS keyboard layout set to **US International** (required for dead keys and RALT combinations)
+
+### Step 1 — Flash custom firmware
+
+The default Vial firmware only supports 32 Tap Dance slots. Cadenza v1.0.0 requires 48.
+
+```bash
+# Clone Vial-QMK
+git clone https://github.com/vial-kb/vial-qmk.git
+cd vial-qmk
+make git-submodule
+
+# Edit keyboards/crkbd/keymaps/vial/config.h
+# Change: #define TAP_DANCE_ENTRIES 32
+# To:     #define TAP_DANCE_ENTRIES 48
+
+# Build
+qmk compile -kb crkbd/rev1 -km vial
+```
+
+Flash via RP2040 drag-and-drop:
+1. Double-tap the reset button → `RPI-RP2` drive appears
+2. Copy the generated `.uf2` file to the drive
+3. Repeat for the other half
+
+### Step 2 — Load the layout
+
+1. Open Vial desktop app, connect keyboard via USB
+2. **File → Load saved layout** → select `configuration/Cadenza-Corne-Pro_v1_0_0.vil`
+3. Confirm all layers loaded correctly
+
+### Step 3 — Verify OS layout
+
+Set your OS keyboard layout to **US International**. This is required for:
+- `RALT+S` → ß
+- `RALT+5` → €
+- Dead key `"` (Shift+Quote) → ä, ö, ü when followed by a vowel
+
+---
 
 ## ✦ Documentation
 
-- **[docs/Cadenza-Layout.html](https://one7two99.github.io/cadenza)** — full documentation with layer visualisations, open in any browser
-- **Layer screenshots** in `docs/layers/`
+| Document | Description |
+|---|---|
+| **[docs/index.html](https://one7two99.github.io/cadenza)** | Full design documentation — layer cards with keyboard diagrams, design decisions, TD/macro reference, vs. Miryoku comparison |
+| **[docs/cadenza-viewer-v1.0.0.html](docs/cadenza-viewer-v1.0.0.html)** | Interactive layer viewer — switch between all 13 layers, layer overview, TD & Macro reference with layer highlighting, Design Philosophy tab |
+| **[VERSIONING.md](VERSIONING.md)** | Semantic versioning policy and complete version history |
+| **[ROADMAP.md](ROADMAP.md)** | Planned milestones — v1.0.x patches, v1.1 features, v2.0 QMK migration |
+
+---
+
+## ✦ Resource Budget
+
+| Resource | Used | Available | Free |
+|---|---|---|---|
+| Tap Dance slots | 43 | 48 | 5 (TD15, TD44–47) |
+| Macro slots | 16 | 16 | 0 |
+| Key Overrides | 0 | 32 | 32 |
+| Combos | 0 | 32 | 32 |
+| Layers | 13 | 16 | 3 |
+
+---
 
 ## ✦ Versioning
 
@@ -102,15 +176,27 @@ Cadenza follows [Semantic Versioning](https://semver.org/) — `vMAJOR.MINOR.PAT
 | **MINOR** | New layer, macro, or Tap Dance added |
 | **MAJOR** | Existing key behaviour changes — muscle memory impact |
 
-The project is currently in `v0.x.x` — initial development, no stability
-guarantees. `v1.0.0` will be tagged when the core layout is complete and
-validated.
+Full versioning policy and change log: [VERSIONING.md](VERSIONING.md)
 
-Full versioning policy: [docs/VERSIONING.md](docs/VERSIONING.md)
+---
 
 ## ✦ Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Ports, language variants, and usage reports are especially welcome.
+See [CONTRIBUTING.md](CONTRIBUTING.md). Ports, language variants, and usage reports are especially welcome. Open a Discussion tagged `roadmap` to suggest future features.
+
+---
+
+## ✦ Support
+
+Cadenza is free and open source — designed, tested, and maintained in spare time on a 36-key keyboard.
+
+If it saved your wrists, spared your carpal tunnel surgeon a visit, or simply made typing feel less like a crime against ergonomics — a coffee would make the author very happy. It won't fund a yacht, but it will absolutely fund the next tap dance slot.
+
+**[☕ Buy the author a coffee on Ko-fi](https://ko-fi.com/one7two99)**
+
+> *36 keys. Zero revenue. Infinite tap dances.*
+
+---
 
 ## ✦ License
 
