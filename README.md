@@ -73,7 +73,7 @@ If it saved your wrists, spared your carpal tunnel surgeon a visit, or simply ma
 | Document | Description |
 |---|---|
 | **[docs/index.html](https://one7two99.github.io/cadenza)** | Full design documentation — layer cards with keyboard diagrams, design decisions, TD/macro reference, vs. Miryoku comparison |
-| **[docs/cadenza-viewer-v1.0.0.html](docs/cadenza-viewer-v1.0.0.html)** | Interactive layer viewer — switch between all 13 layers, layer overview, TD & Macro reference with layer highlighting, Design Philosophy tab |
+| **[docs/cadenza-viewer-v1.0.0.html](https://one7two99.github.io/cadenza/cadenza-viewer-v1.0.0.html)** | Interactive layer viewer — switch between all 13 layers, layer overview, TD & Macro reference with layer highlighting, Design Philosophy tab |
 | **[VERSIONING.md](VERSIONING.md)** | Semantic versioning policy and complete version history |
 | **[ROADMAP.md](ROADMAP.md)** | Planned milestones — v1.0.x patches, v1.1 features, v2.0 QMK migration |
 
