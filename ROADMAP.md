@@ -1,5 +1,15 @@
 # Cadenza Roadmap
 
+> ## ⚠ Roadmap closed — Project archived (May 2026)
+>
+> Active development has moved to **[Cadence](https://github.com/one7two99/cadence)**, the 34-key Ferris Sweep adaptation. Cadenza v1.0.0 is feature-complete and stable on its target hardware (36-key Corne Choc), but no further releases are planned.
+>
+> The "Active / Planned" items previously listed here have either been delivered in Cadence or superseded by better designs developed there. See the [migration summary below](#migration-summary) for details.
+>
+> **For users of Corne hardware:** Cadenza v1.0.0 remains fully usable and supported. Critical bug fixes may still be merged. Feature requests and design discussions should go to the [Cadence repository](https://github.com/one7two99/cadence) instead.
+
+---
+
 ## v0.8 — Completed ✓
 
 - [x] **L10 International Characters** — `\` · `|` · `` ` `` · `"` mirrored on both hands.
@@ -51,76 +61,66 @@
 
 ---
 
-## v1.x — Active / Planned
+## Migration summary
 
-### v1.0.x — Stabilisation (PATCH)
+The roadmap items previously planned for Cadenza v1.0.x, v1.1.0, and v2.0.0 have not been abandoned — they have been delivered in [Cadence](https://github.com/one7two99/cadence), often with refinements that wouldn't have been possible within Cadenza's hardware constraints.
 
-- [ ] **Real-world tipping term data** — validate 200/250 ms defaults after daily use
-  of L11/L12. Adjust if false triggers or missed holds appear.
-  Likely candidates: TD(13)/TD(14) F/U (middle top) may need shorter term
-  than ring/pinky; TD(30) L may behave differently at speed.
+### Items delivered in Cadence
 
-- [ ] **L11/L12 i3/Sway keybind validation** — confirm that `LGUI(KC_LEFT)` for focus
-  switching and `SGUI(KC_LEFT)` for window movement match the actual i3/Sway
-  config. Patch if bindings differ.
+| Cadenza plan | Status in Cadence | Notes |
+|---|---|---|
+| Real-world tipping term data | ✓ delivered | Per-key tipping terms via Tap Dance — same approach, validated through extended daily use on Sweep hardware |
+| L11/L12 i3/Sway keybind validation | ✓ delivered | Single consolidated L8 Tiling WM (WS 1–10 + focus + window move) replaces Cadenza's split L11/L12 |
+| L11 thumb symmetry | ✓ delivered | Resolved by the consolidation — no L11/L12 ambiguity exists in Cadence |
+| Key Overrides | open in Cadence v1.12.0 | Same plan, same rationale, tracked on the Cadence roadmap |
+| Combos | open in Cadence v1.12.0 | Same plan, tracked on the Cadence roadmap |
+| QMK migration to `keymap.c` | planned for Cadence v2.0.0 | Migration target updated: `Cadence-FerrisSweep_v1_11_0.vil` is the new authoritative source |
 
-- [ ] **L11 thumb symmetry** — verify Kill/Float/Fullscreen on left thumbs
-  (Esc/Spc/Tab positions) behave correctly and don't conflict with the base layer
-  LT hold on Spc (→L2) and Tab (→L3) when switching between L11 and L2/L3.
+### Items superseded by better designs in Cadence
 
-### v1.1.0 — New features (MINOR)
+Some Cadenza design decisions turned out to be sub-optimal once the layout saw extended daily use. The Cadence work surfaced these issues and solved them:
 
-- [ ] **Key Overrides** — 32 slots completely free. Low-hanging fruit:
-  `Shift + Bsp → Del` (standard ergonomic habit), `Shift + Esc → ~` (common in vim).
-  Does not use any TD slot. Evaluate after v1.0.x stabilisation.
+- **Mouse layer activation** — Cadenza placed Mouse on `Hold Tab` (left thumb). Cadence v1.11 introduced the `Spc tap+hold` pattern (TD(21)) which solves a Home Row Mod blocking issue that Cadenza's Tab-hold trigger didn't have, but that surfaced in Cadence's earlier bilateral F+U trigger. The tap+hold pattern is a genuine improvement applicable to either form factor.
 
-- [ ] **Combos** — 32 slots completely free. Natural candidates:
-  simultaneous `J + K` → Esc (vim pattern), `S + D` → Ctrl+S (save).
-  Requires careful testing to avoid false triggers with Colemak-DH bigrams.
+- **L1 access via Tab-hold instead of W/Y** — Cadenza put RGB & Media on `Hold W or Hold Y` (ring fingers, top row). Cadence v1.11 puts International on `Hold Tab` (left thumb inner) using a Tap-Dance carrier (TD(10): tap = Tab, hold = MO(1)). The thumb access is faster and more reliable than ring-finger top-row holds for a frequently-used layer.
 
-- [ ] **L5 Numbers — review right-hand content** — current right half has
-  KP operators and modifiers. Evaluate whether `( )` pair (currently on L5 home
-  as a single key) should instead be TD5 from L8 for consistency.
+- **Symbol layer access asymmetry (L12 in Cadence)** — Cadenza's L4 Symbols was good, but Cadence v1.11 introduced a new design principle: since the layer activator (Bsp held) anchors one hand, high-frequency symbols should preferentially land on the freer hand. This redesign was driven by lessons from Sonata's even tighter constraints and is shared between Cadence and Sonata.
+
+- **Bracket trigger from D+H to X+.** — Cadenza uses `Hold C or Hold ,` for L8 Brackets. Cadence v1.9 moved this to `Hold D or Hold H`, then v1.11 moved it again to `Hold X or Hold .` — the iteration revealed that bracket-layer triggers should sit on low-frequency letters to avoid hold-detection conflicts during normal typing. X and . are far less frequent than D, H, C, or , in DE+EN.
+
+### What Cadence cannot do that Cadenza can
+
+To be honest about the trade-offs: Cadence is not a strict superset of Cadenza. The Sweep's reduced thumb cluster forces some compromises:
+
+- **No dedicated `Esc` thumb key** — in Cadence, Esc lives inside layers (L1, L7), not on a thumb. Vim/modal-editor users who hit Esc constantly may prefer Cadenza's design.
+- **No L1 RGB layer** — the Sweep typically has no RGB hardware, so Cadence merges this concern away. Corne Choc users who actually use RGB will find Cadenza retains the proper layer for it.
+- **Single L8 Tiling WM instead of L11 Quick + L12 Full** — the consolidation is cleaner, but if you specifically wanted reflex-speed access to WS 1–4 distinct from full WS 1–10, Cadenza's two-layer approach is preserved here.
+
+For users with 36-key Corne hardware and an established workflow that uses these features, **Cadenza v1.0.0 remains the recommended choice**. It is feature-complete, well-documented, and not going anywhere.
 
 ---
 
-## v2.0.0 — QMK migration (MAJOR)
+## v2.0.0 QMK migration — moved to Cadence
 
-The most significant planned evolution. Cadenza v1.0.0 is fully specified and
-verified — the right moment to port from Vial's EEPROM-based config to a proper
-`keymap.c` source file.
+The QMK migration originally planned for Cadenza v2.0.0 was deferred and will be done in Cadence v2.0.0 instead. Reasons:
 
-**Benefits gained:**
-- Full git history of every key change
-- Leader key sequences (macros without using macro slots)
-- Combo definitions in code (no timing risk from Vial UI)
-- Key override logic in C (conditional, layer-aware)
-- Reproducibility: one `.uf2` = complete keyboard, no EEPROM dependency
-- Unlimited macro content (not limited to 16 Vial slots)
+- **Configuration churn** — Cadence's layout went through significant evolution (v1.5 → v1.8 → v1.9 → v1.11) before stabilising. Migrating to `keymap.c` mid-evolution would have created throwaway work.
+- **Cadence v1.11 is the natural starting point** — it incorporates lessons from Cadenza, Sonata, and extended daily use. It is the design that should live in `keymap.c`, not the Corne-specific Cadenza variant.
+- **Source-of-truth alignment** — having only one keymap.c (Cadence) avoids the maintenance burden of keeping two firmware codebases in sync.
 
-**Migration approach:**
-- Use `cadenza_v1_0_0_config.json` as the authoritative source of truth
-- Generate `keymap.c` systematically from the JSON rather than by hand
-- Keep Vial support enabled (via `vial_enable = true` in `rules.mk`) so the
-  Vial UI can still be used for live experimentation — changes that survive
-  testing get committed back to `keymap.c`
-- Tag `v2.0.0` once `keymap.c` is the canonical source and the `.vil` file
-  is demoted to a convenience export
-
-**Classification as MAJOR:** the migration itself changes no key behaviour,
-but the source-of-truth moves from EEPROM to firmware — any `.vil` file from
-v1.x will no longer be the canonical config. This warrants a MAJOR bump
-as a clear signal to users.
+If you specifically want a `keymap.c` for Corne hardware, the Cadence v2.0.0 work could in principle be back-ported once it stabilises. This is not currently planned but is technically straightforward — the layer architecture is shared.
 
 ---
 
 ## Community Wishlist
 
-Open a Discussion tagged `roadmap` to add yours.
+For new ideas, please open a Discussion in the [Cadence repository](https://github.com/one7two99/cadence/discussions) tagged `roadmap`. Discussions opened here on Cadenza will be redirected.
+
+The Cadenza wishlist below is preserved as a historical record:
 
 | Idea | Raised by | Status |
 |---|---|---|
-| *(be the first)* | — | — |
+| *(no entries before archive)* | — | — |
 
 ---
 

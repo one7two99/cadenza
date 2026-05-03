@@ -2,6 +2,7 @@
   <img src="assets/cadenza-banner-final.png" width="620" alt="Cadenza Banner"/>
   <br><br>
   <p>
+    <img src="https://img.shields.io/badge/status-archived-lightgrey?style=flat-square" alt="Status: Archived">
     <img src="https://img.shields.io/badge/version-1.0.0-brightgreen?style=flat-square" alt="Version">
     <img src="https://img.shields.io/badge/keyboard-Corne%20Choc%2036-blue?style=flat-square" alt="Keyboard">
     <img src="https://img.shields.io/badge/firmware-Vial%20%2F%20QMK-orange?style=flat-square" alt="Firmware">
@@ -11,6 +12,33 @@
     <img src="https://img.shields.io/github/license/one7two99/cadenza?style=flat-square" alt="License">
   </p>
 </div>
+
+---
+
+## ⚠ Project status — Archived (May 2026)
+
+**Active development has moved to [Cadence](https://github.com/one7two99/cadence).** Cadenza v1.0.0 is feature-complete and stable on its target hardware (36-key Corne Choc), but it is no longer receiving updates. This repository remains available for users of Corne hardware and as a historical reference for the design philosophy.
+
+### Why the move?
+
+Cadenza was the first layout in this project family. Working with it daily surfaced two realisations:
+
+- **The Corne's six thumb keys aren't all needed.** The 34-key Ferris Sweep with four thumb keys turns out to be sufficient if Tap-Dance carrier patterns replace dedicated thumb keys (`Spc tap+hold` for two related layers, `Tab hold` for International access).
+- **Some Cadenza design decisions only made sense on Corne hardware.** Things like the dedicated `Esc` thumb key, the L11/L12 split between Quick and Full WM layers, or the L1 RGB layer (the Sweep has no RGB) — all of these became unnecessary on smaller hardware.
+
+[Cadence](https://github.com/one7two99/cadence) is the spiritual successor: same design philosophy (Colemak-DH, Tap Dance HRM, Frequency+Strength symbol ranking, no-inner-column rule), but refined for smaller hardware with lessons from real daily use applied. It is the layout I now use as a daily driver.
+
+### Should you use Cadenza or Cadence?
+
+| You should use… | When… |
+|---|---|
+| **Cadenza** | You own a 36-key Corne Choc and want a complete, stable, frozen layout |
+| **[Cadence](https://github.com/one7two99/cadence)** | You own a 34-key Ferris Sweep, OR you want the layout that's actively maintained and incorporates the latest design lessons |
+| **[Sonata](https://github.com/one7two99/sonata)** | You want the most minimalist variant — 28 keys, same layer architecture as Cadence |
+
+### What still works here
+
+Everything documented below remains accurate for Cadenza v1.0.0 on Corne hardware. The `.vil` configuration, the firmware build instructions, all 13 layers — all of it is functional and will continue to work. The repository is in maintenance-only mode: critical fixes may still be merged, but no new features.
 
 ---
 
@@ -194,7 +222,9 @@ Full versioning policy and change log: [VERSIONING.md](VERSIONING.md)
 
 ## ✦ Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md). Ports, language variants, and usage reports are especially welcome. Open a Discussion tagged `roadmap` to suggest future features.
+Cadenza is in **maintenance-only mode** as of May 2026. Critical bug fixes may still be merged, but no new features will be added — please direct feature requests and design discussions to the [Cadence](https://github.com/one7two99/cadence) repository instead.
+
+For documentation issues, typos, or hardware compatibility reports specific to Corne Choc, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 

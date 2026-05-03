@@ -71,6 +71,7 @@ hr{border:none;border-top:1px solid #E8E6E0;margin:36px 0}
     <div class="tagline">36 keys. A tap dance for the typing elite.</div></div>
   </div>
   <div class="badges">
+    <span class="badge" style="background:#ece5dc;color:#3a2f24;border:1px solid #b3a18a;font-weight:600;">⚠ Archived (May 2026)</span>
     <span class="badge badge-amber">v1.0.0</span>
     <span class="badge badge-blue">Colemak-DH</span>
     <span class="badge badge-green">13 layers</span>
@@ -82,6 +83,59 @@ hr{border:none;border-top:1px solid #E8E6E0;margin:36px 0}
     <a href="https://github.com/one7two99/cadenza" class="badge badge-gray" style="text-decoration:none">★ View on GitHub</a>
   </div>
   <blockquote style="margin-top:18px"><em>Cadenza (n.): a brilliant, technically demanding solo passage — calling for precision timing and controlled technique.</em></blockquote>
+</div>
+
+<div class="archived-notice" style="background:#fbf6f3;border:1px solid #d8c8b8;border-left:5px solid #8a6d4a;border-radius:8px;padding:24px 28px;margin:0 0 36px;color:#3a2f24;">
+  <h2 style="margin-top:0;font-size:18px;color:#3a2f24;display:flex;align-items:center;gap:10px;">
+    <span style="font-size:22px;">⚠</span>
+    <span>Project status — Archived (May 2026)</span>
+  </h2>
+  <p style="margin:0 0 12px;font-size:14px;line-height:1.65;">
+    <strong>Active development has moved to <a href="https://github.com/one7two99/cadence" style="color:#5a3d1c;text-decoration:underline;">Cadence</a></strong>, the 34-key Ferris Sweep adaptation.
+    Cadenza v1.0.0 is feature-complete and stable on its target hardware (36-key Corne Choc), but it is no longer receiving updates.
+    This documentation remains available for users of Corne hardware and as a historical reference for the design philosophy.
+  </p>
+
+  <h3 style="font-size:15px;color:#3a2f24;margin:18px 0 8px;">Why the move?</h3>
+  <p style="margin:0 0 10px;font-size:14px;line-height:1.65;">
+    Cadenza was the first layout in this project family. Working with it daily surfaced two realisations:
+  </p>
+  <ul style="margin:6px 0 12px;padding-left:22px;font-size:14px;line-height:1.7;">
+    <li><strong>The Corne's six thumb keys aren't all needed.</strong> The 34-key Ferris Sweep with four thumb keys turns out to be sufficient if Tap-Dance carrier patterns replace dedicated thumb keys (<code>Spc tap+hold</code> for two related layers, <code>Tab hold</code> for International access).</li>
+    <li><strong>Some Cadenza design decisions only made sense on Corne hardware.</strong> The dedicated <code>Esc</code> thumb key, the L11/L12 split between Quick and Full WM layers, the L1 RGB layer (the Sweep has no RGB) — all became unnecessary on smaller hardware.</li>
+  </ul>
+  <p style="margin:0 0 12px;font-size:14px;line-height:1.65;">
+    <a href="https://github.com/one7two99/cadence" style="color:#5a3d1c;text-decoration:underline;">Cadence</a> is the spiritual successor: same design philosophy (Colemak-DH, Tap Dance HRM, Frequency+Strength symbol ranking, no-inner-column rule), refined for smaller hardware with lessons from real daily use applied. It is the layout the author now uses as a daily driver.
+  </p>
+
+  <h3 style="font-size:15px;color:#3a2f24;margin:18px 0 8px;">Should you use Cadenza or Cadence?</h3>
+  <table style="width:100%;border-collapse:collapse;font-size:13.5px;margin:6px 0 14px;">
+    <thead>
+      <tr style="background:#f3ece3;">
+        <th style="text-align:left;padding:8px 12px;border-bottom:1px solid #d8c8b8;">You should use…</th>
+        <th style="text-align:left;padding:8px 12px;border-bottom:1px solid #d8c8b8;">When…</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid #ece2d4;font-weight:600;">Cadenza</td>
+        <td style="padding:8px 12px;border-bottom:1px solid #ece2d4;">You own a 36-key Corne Choc and want a complete, stable, frozen layout</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;border-bottom:1px solid #ece2d4;font-weight:600;"><a href="https://github.com/one7two99/cadence" style="color:#5a3d1c;text-decoration:underline;">Cadence</a></td>
+        <td style="padding:8px 12px;border-bottom:1px solid #ece2d4;">You own a 34-key Ferris Sweep, OR you want the layout that's actively maintained and incorporates the latest design lessons</td>
+      </tr>
+      <tr>
+        <td style="padding:8px 12px;font-weight:600;"><a href="https://github.com/one7two99/sonata" style="color:#5a3d1c;text-decoration:underline;">Sonata</a></td>
+        <td style="padding:8px 12px;">You want the most minimalist variant — 28 keys, same layer architecture as Cadence</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:15px;color:#3a2f24;margin:18px 0 8px;">What still works here</h3>
+  <p style="margin:0;font-size:14px;line-height:1.65;">
+    Everything documented below remains accurate for Cadenza v1.0.0 on Corne hardware. The <code>.vil</code> configuration, the firmware build instructions, all 13 layers — all of it is functional and will continue to work. The repository is in maintenance-only mode: critical fixes may still be merged, but no new features will be added.
+  </p>
 </div>
 
 <h2 id="intro">Cadenza v1.0.0 — Design Decisions and Layer Documentation</h2>
